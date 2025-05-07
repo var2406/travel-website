@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BeyondTheJourney</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+ <style>
+ 
+ body {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .custom-navbar {
+  background-color: #000;                     /* Solid black */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);   /* Keep shadow */
+  border-radius: 0;                           /* No rounded corners */
+  transition: all 0.3s ease-in-out;
+  z-index: 999;
+}
+
+
+.navbar-brand {
+  font-size: 1.6rem;
+  color: #ffffff !important;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff !important;
+  font-size: 0.95rem;
+  padding: 8px 14px;
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  font-weight: 500;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ff6f61 !important;
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+}
+
+.navbar-toggler {
+  border: none;
+  filter: invert(1);
+}
+
+
+
+
+    .hero {
+     background: url('BEX_Footer.avif') center center/cover no-repeat; 
+      height: 90vh;
+      color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-shadow: 2px 2px 8px #000;
+    }
+    .custom-btn {
+  background-color: #ff6f61;       /* Warm coral tone */
+  color: black;
+  border: none;
+  border-radius: 25px;             /* Rounded pill shape */
+           
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.custom-btn:hover {
+  background-color: #e65c50;
+  transform: translateY(-2px);     /* Subtle hover lift */
+}
+
+
+    .card img {
+      height: 200px;
+      object-fit: cover;
+    }
+    .review-bubble {
+  position: relative;
+  background: black;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.review-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 40px;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: black;
+}
+.card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .fade-in {
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+</style>
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top custom-navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#">
+        <i class="bi bi-globe2 me-2"></i>BeyondTheJourney
+      </a>
+  
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse justify-content-end" id="navmenu">
+        <ul class="navbar-nav fw-semibold text-uppercase">
+          <li class="nav-item">
+            <a class="nav-link" href="#home"><i class="bi bi-house-door me-1"></i>Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#destinations"><i class="bi bi-geo-alt-fill me-1"></i>Destinations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="reviews.html"><i class="bi bi-chat-left-text-fill me-1"></i>Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html"><i class="bi bi-envelope-fill me-1"></i>Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  
+
+
+<!-- Hero Section -->
+
+<section class="hero text-center">
+  <h1 style="color: white">Escape to Paradise</h1>
+  <p style="color: rgb(213, 214, 220);">Discover new places with us</p>
+  <a href="#destinations" class="btn custom-btn btn-sm mt-3">Start Your Journey</a>
+</section>
+<!-- Search Bar -->
+
+<section class="py-5" style="background: linear-gradient(to right, #e0f7fa, #f1f8e9);">
+  <div class="container">
+
+<h2 class="text-center mb-4 fw-bold text-success">🔍 Find Your Destination</h2>
+<form class="d-flex justify-content-center align-items-center gap-2" style="max-width: 700px; margin: 0 auto;">
+  <div class="input-group shadow-sm rounded-pill overflow-hidden">
+    <span class="input-group-text bg-white border-0">
+      <i class="bi bi-search text-primary"></i>
+    </span>
+    <input class="form-control border-0" type="search" placeholder="Search for places..." aria-label="Search">
+  </div>
+  <button class="btn btn-primary rounded-pill px-4 fw-semibold shadow-sm" type="submit">Search</button>
+</form>
+
+
+  </div>
+</section>
+
+<!-- Destinations Section -->
+
+<section id="destinations" class="py-5" style="background: linear-gradient(to right, #e0f7fa, #f1f8e9);">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-bold  " style="color: #131411;">Popular Destinations</h2>
+    <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="paris photo.jpg" class="card-img-top" alt="Paris">
+            <div class="card-body">
+              <h5 class="card-title">Paris</h5>
+              <p class="card-text">Experience the City of Love with its stunning architecture and culture.</p>
+              <a href="https://tripsandleisure.com/inspirations/most-beautiful-places-in-paris/" 
+                 target="_blank" rel="noopener noreferrer" class="btn btn-primary">Explore</a>
+            </div>
+          </div>
+        </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="image.png" class="card-img-top" alt="Maldives">
+          <div class="card-body">
+            <h5 class="card-title">Maldives</h5>
+            <p class="card-text">Relax on beautiful beaches and enjoy luxury resorts in the Maldives.</p>
+            <a href="https://steemit.com/travel/@mdrakib/beauty-of-maldives" 
+               target="_blank" rel="noopener noreferrer" class="btn btn-primary">Explore</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="card">
+          <img src="new york.jpg" class="card-img-top" alt="New York">
+          <div class="card-body">
+            <h5 class="card-title">New York</h5>
+            <p class="card-text">The city that never sleeps, filled with culture, food, and attractions.</p>
+            <a href="https://theboutiqueadventurer.com/most-beautiful-places-in-new-york-city/" 
+               target="_blank" rel="noopener noreferrer" class="btn btn-primary">Explore</a>
+          </div>
+        </div>
+      </div>
+      
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="nainital.jpg" class="card-img-bottom" alt="Mountains">
+          <div class="card-body">
+            <h5 class="card-title">Mountains</h5>
+            <p class="card-text">Climb into nature’s arms and discover the beauty of Hidden Falls, surrounded by towering mountains and serene landscapes.</p>
+            <a href="https://www.tourmyindia.com/blog/top-hill-stations-in-india/" 
+               target="_blank" rel="noopener noreferrer" class="btn btn-primary">Explore</a>
+          </div>
+        </div>
+      </div>
+      
+
+  <div class="col-md-4">
+    <div class="card">
+      <img src="beachhhessssssssss.png" class="card-img-bottom" alt="Beaches">
+      <div class="card-body">
+        <h5 class="card-title">Beaches</h5>
+        <p class="card-text">Golden sands, crystal waters, and a gentle waterfall await you at Hidden Falls — the beach getaway of your dreams.</p>
+        <a href="https://www.thrillophilia.com/guide-to-beaches-in-india" 
+           target="_blank" rel="noopener noreferrer" class="btn btn-primary">Explore</a>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="col-md-4">
+    <div class="card">
+      <img src="hidden falls.jpeg" class="card-img-bottom" alt="Hidden Falls">
+      <div class="card-body">
+        <h5 class="card-title">Hidden Falls</h5>
+        <p class="card-text">Experience the soothing sounds of water and the beauty of lush greenery at the breathtaking Hidden Falls.</p>
+        <a href="https://www.tripadvisor.in/Attractions-g293860-Activities-c57-t95-India.html" 
+           target="_blank" rel="noopener noreferrer" class="btn btn-primary">Explore</a>
+      </div>
+    </div>
+  </div>
+  
+  </div>
+    </div>
+</div>
+</section>
+<!-- Accordion -->
+<div class="accordion" id="travelAccordion">
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+          aria-expanded="true" aria-controls="collapseOne">
+          Best Pricing
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#travelAccordion">
+        <div class="accordion-body">
+          We offer unbeatable travel packages at the most competitive prices.
+        </div>
+      </div>
+    </div>
+  
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+          aria-expanded="false" aria-controls="collapseTwo">
+          Top Destinations
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#travelAccordion">
+        <div class="accordion-body">
+          Explore the most beautiful and exotic destinations around the world.
+        </div>
+      </div>
+    </div>
+  
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
+          aria-expanded="false" aria-controls="collapseThree">
+          Excellent Customer Service
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#travelAccordion">
+        <div class="accordion-body">
+          Our team is here to support you 24/7 for a seamless travel experience.
+        </div>
+      </div>
+    </div>
+  
+</div>
+</div>
+</section>
+
+<!-- Reviews Section -->
+
+<section id="reviews" class="py-5" style="background: linear-gradient(to right, #fefefe, #e6f2ff);">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-boldy" style="color: #000;">What Our Travelers Say</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card p-4 border-0 rounded-4 shadow-sm h-100" style="background: #ffffff;">
+          <p class=" text-primary">"Amazing experience! The trip was well-organized and the destinations were breathtaking!"</p>
+          <h6 class="text-end text-primary fw-semibold">- Sarah W.</h6>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-4 border-0 rounded-4 shadow-sm h-100" style="background: #ffffff;">
+          <p class=" text-primary">"Loved every moment. Highly recommend Travel Explorer for your next vacation."</p>
+          <h6 class="text-end text-primary fw-semibold">- John D.</h6>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-4 border-0 rounded-4 shadow-sm h-100" style="background: #ffffff;">
+          <p class=" text-primary">"The best travel agency I’ve ever used. Professional and friendly staff!"</p>
+          <h6 class="text-end text-primary fw-semibold">- Emily K.</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+
+<footer class="text-center py-4" style="background-color: #003b46;">
+  <div class="container">
+    <p class="mb-0 text-white fw-medium">&copy; 2025 BeyondTheJourney. All rights reserved.</p>
+  </div>
+</footer>
+<script>
+  window.addEventListener('scroll', function () {
+    const navbar = document.querySelector('.custom-navbar');
+    if (window.scrollY > 50) {
+      navbar.style.padding = '6px 0';
+      navbar.style.backdropFilter = 'blur(20px)';
+    } else {
+      navbar.style.padding = '';
+      navbar.style.backdropFilter = 'blur(14px)';
+    }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
